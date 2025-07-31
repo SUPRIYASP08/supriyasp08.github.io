@@ -129,7 +129,7 @@
       <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
         <div class="about-photo-container">
           <div class="about-photo-frame">
-            <img src="Zenitsu3.png" alt="Supriya" class="about-photo">
+            <img src="p2.jpg" alt="Supriya" class="about-photo">
           </div>
           <div class="text-center mt-4">
             <a href="supriya's resume.pdf" class="btn btn-download-cv" download>
@@ -202,64 +202,617 @@
 </section>
 
     <!-- Education -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supriya's Education Journey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== Global Styles ===== */
+        :root {
+            --primary: #6c63ff;
+            --secondary: #4a42e8;
+            --dark: #2f2e41;
+            --light: #f8f9fa;
+            --accent: #ff6584;
+            --school-color: #4cc9f0;
+            --college-color: #a162e8;
+            --text-dark: #333;
+            --text-light: #777;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9ff;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        /* ===== Education Section ===== */
+        #education {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #education::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1470&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            opacity: 0.03;
+            z-index: -1;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            bottom: -10px;
+            left: 10%;
+            border-radius: 5px;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        /* ===== Timeline Layout ===== */
+        .education-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 3rem;
+        }
+        
+        .education-column {
+            flex: 1;
+            position: relative;
+            min-width: 0;
+        }
+        
+        .education-column h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 10px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+        
+        .education-column h3 i {
+            margin-right: 10px;
+        }
+        
+        .school-column h3 {
+            background: linear-gradient(135deg, var(--school-color), #3aa8d1);
+        }
+        
+        .college-column h3 {
+            background: linear-gradient(135deg, var(--college-color), #8a4de3);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--school-color), var(--college-color));
+            left: 28px;
+            border-radius: 3px;
+        }
+        
+        /* ===== Timeline Items ===== */
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border-left: 5px solid;
+            overflow: hidden;
+        }
+        
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        .school-column .timeline-item {
+            border-color: var(--school-color);
+        }
+        
+        .college-column .timeline-item {
+            border-color: var(--college-color);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            left: -36px;
+            top: 30px;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px;
+            z-index: 1;
+        }
+        
+        .school-column .timeline-item::before {
+            background: var(--school-color);
+            box-shadow: 0 0 0 3px var(--school-color);
+        }
+        
+        .college-column .timeline-item::before {
+            background: var(--college-color);
+            box-shadow: 0 0 0 3px var(--college-color);
+        }
+        
+        /* ===== Content Styling ===== */
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .course {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .school-column .course {
+            color: var(--school-color);
+        }
+        
+        .college-column .course {
+            color: var(--college-color);
+        }
+        
+        .year {
+            background: var(--light);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .institution {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .board {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .percentage {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 1rem;
+            padding: 0.5rem 1.2rem;
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            gap: 8px;
+        }
+        
+        .school-column .percentage {
+            background: linear-gradient(135deg, var(--school-color), #3aa8d1);
+        }
+        
+        .college-column .percentage {
+            background: linear-gradient(135deg, var(--college-color), #8a4de3);
+        }
+        
+        /* ===== Achievements Section ===== */
+        .achievements {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed #eee;
+        }
+        
+        .achievements h4 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .achievements ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+        
+        .achievements li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 25px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .achievements li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+        
+        /* ===== Decorative Elements ===== */
+        .education-icon {
+            position: absolute;
+            font-size: 6rem;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .school-column .education-icon {
+            color: var(--school-color);
+            top: 50px;
+            right: 30px;
+        }
+        
+        .college-column .education-icon {
+            color: var(--college-color);
+            top: 50px;
+            left: 30px;
+        }
+        
+        /* ===== Responsive Design ===== */
+        @media (max-width: 992px) {
+            .education-container {
+                flex-direction: column;
+            }
+            
+            .timeline {
+                padding-left: 50px;
+            }
+            
+            .timeline::before {
+                left: 23px;
+            }
+            
+            .timeline-item::before {
+                left: -31px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section-header p {
+                font-size: 1rem;
+            }
+            
+            .timeline-item {
+                padding: 1.5rem;
+            }
+            
+            .course {
+                font-size: 1.2rem;
+            }
+            
+            .institution {
+                font-size: 1.1rem;
+            }
+            
+            .education-icon {
+                font-size: 4rem;
+            }
+        }
+        
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .timeline-item {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+    </style>
+</head>
+<body>
     <section id="education">
         <div class="container">
-            <h2>Education</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Course</th>
-                        <th>Institution</th>
-                        <th>Board/University</th>
-                        <th>Year</th>
-                        <th>Percentage</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>BSc (Maths & CS)</td>
-                        <td>JSS College, Mysore</td>
-                        <td>Mysore University</td>
-                        <td>2022–2025</td>
-                        <td>77.7%</td>
-                    </tr>
-                    <tr>
-                        <td>PUC</td>
-                        <td>St. Mary's PU College, Kundapura</td>
-                        <td>Pre-University Board</td>
-                        <td>2021–2022</td>
-                        <td>65.0%</td>
-                    </tr>
-                    <tr>
-                        <td>SSLC</td>
-                        <td>St. Mary's High School, Kundapura</td>
-                        <td>SSLC Board</td>
-                        <td>2019–2020</td>
-                        <td>77.28%</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="section-header">
+                <h2>My Education Journey</h2>
+                <p>From foundational learning to specialized knowledge, here's a timeline of my academic achievements and growth</p>
+            </div>
+                        <!-- College Education Column -->
+                <div class="education-column college-column">
+                    <i class="fas fa-university education-icon"></i>
+                    <h3><i class="fas fa-user-graduate"></i> College Education</h3>
+                    
+                    <div class="timeline">
+                        <!-- BSc -->
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="course">BSc (Mathematics & Computer Science)</span>
+                                <span class="year"><i class="far fa-calendar-alt"></i> 2022–2025</span>
+                            </div>
+                            <div class="institution"><i class="fas fa-map-marker-alt"></i> JSS College, Mysore</div>
+                            <div class="board"><i class="fas fa-certificate"></i> University of Mysore</div>
+                            <span class="percentage"><i class="fas fa-percentage"></i> 77.7% (Current)</span>
+                            
+                            <div class="achievements">
+                                <h4><i class="fas fa-trophy"></i> Achievements & Activities</h4>
+                                <ul>
+                                    <li>Specialized in advanced mathematics and programming</li>
+                                    <li>Developed multiple academic projects in Python and Java</li>
+                                    <li>Participated in college tech fests and coding competitions</li>
+                                    <li>Member of Mathematics Club and Computer Science Society</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="education-container">
+                <!-- School Education Column -->
+                 <!-- College Education Column -->
+                        <!-- SSLC -->
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="course">SSLC</span>
+                                <span class="year"><i class="far fa-calendar-alt"></i> 2019–2020</span>
+                            </div>
+                            <div class="institution"><i class="fas fa-map-marker-alt"></i> St. Mary's High School, Kundapura</div>
+                            <div class="board"><i class="fas fa-certificate"></i> Karnataka SSLC Board</div>
+                            <span class="percentage"><i class="fas fa-percentage"></i> 77.28%</span>
+                            
+                            <div class="achievements">
+                                <h4><i class="fas fa-trophy"></i> Achievements</h4>
+                                <ul>
+                                    <li>Secured distinction in Mathematics and Science</li>
+                                    <li>Active participant in school science exhibitions</li>
+                                    <li>Member of school volleyball team</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- PUC -->
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="course">PUC (Science)</span>
+                                <span class="year"><i class="far fa-calendar-alt"></i> 2021–2022</span>
+                            </div>
+                            <div class="institution"><i class="fas fa-map-marker-alt"></i> St. Mary's PU College, Kundapura</div>
+                            <div class="board"><i class="fas fa-certificate"></i> Karnataka Pre-University Board</div>
+                            <span class="percentage"><i class="fas fa-percentage"></i> 65.0%</span>
+                            
+                            <div class="achievements">
+                                <h4><i class="fas fa-trophy"></i> Achievements</h4>
+                                <ul>
+                                    <li>Specialized in PCMB (Physics, Chemistry, Mathematics, Biology)</li>
+                                    <li>Participated in inter-college quiz competitions</li>
+                                    <li>Completed basic computer science coursework</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   
+            </div>
         </div>
-    </section>
+      </section>
+    <script>
+        // Simple script to handle animations on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            timelineItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
 
     <!-- Contact Me -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:supriyasp08@gmail.com">supriyasp08@gmail.com</a></p>
-            <p>Phone: <a href="tel:9035322726">9035322726</a></p>
-            <p>Address: D/O Shrikanth Papale, Ward No. 2, Ginigera, Koppal, Karnataka - 583228</p>
+    <section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Feel free to reach out for collaborations or just a friendly hello</p>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                        </svg>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:supriyasp08@gmail.com" class="contact-link">supriyasp08@gmail.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3>Phone</h3>
+                    <a href="tel:9035322726" class="contact-link">+91 9035322726</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3>Address</h3>
+                    <p class="contact-text">D/O Shrikanth Papale, Ward No. 2, Ginigera, Koppal, Karnataka - 583228</p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Me a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+    
+    <div class="notification" id="notification">
+        <p>Your message has been sent successfully!</p>
+    </div>
+</section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Supriya S P | All Rights Reserved</p>
+   <footer class="portfolio-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Need Project Help?</h3>
+                <p>I'm available for collaborations and freelance projects. If you need help building:</p>
+                <ul class="project-types">
+                    <li><i class="fas fa-code"></i> Web Applications</li>
+                    <li><i class="fas fa-mobile-alt"></i> Mobile Apps</li>
+                    <li><i class="fas fa-laptop-code"></i> Software Solutions</li>
+                    <li><i class="fas fa-chart-line"></i> Data Analysis Projects</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Me</h3>
+                <div class="contact-methods">
+                    <a href="mailto:supriyasp08@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i> supriyasp08@gmail.com
+                    </a>
+                    <a href="https://www.instagram.com/supriyasp07" target="_blank" class="contact-link">
+                        <i class="fab fa-instagram"></i> @supriyasp07
+                    </a>
+                    <a href="https://www.linkedin.com/in/supriya-sp" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin-in"></i> Supriya SP
+                    </a>
+                </div>
+                
+                <div class="call-to-action">
+                    <p>Let's build something amazing together!</p>
+                    <a href="mailto:supriyasp08@gmail.com" class="cta-button">
+                        Get in Touch <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-    </footer>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Supriya S P | All Rights Reserved</p>
+            <p class="signature">Crafted with ❤️ by Supriya</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Add these in your head section -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
     <script>
   // Add scroll effect to navbar
   window.addEventListener('scroll', function() {
